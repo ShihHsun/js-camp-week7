@@ -250,11 +250,14 @@ async function getOrdersWithAxios() {
 /*
 比較題：請說明 fetch 和 axios 的主要差異
 
-1. ____________________________________
+1. fetch-手動呼叫response.json()
+   axios-直接從response.data取得資訊
 
-2. ____________________________________
+2. fetch- HTTP 4xx/5xx 不被視為錯誤需要寫入try 中 return error
+   axios- HTTP 4xx/5xx 視為錯誤，
 
-3. ____________________________________
+3. fetch- 手動寫 headers, JSON.stringify(body)
+   axios- header可以統一管理 自動設定 Content-Type, 不用每次寫BASE_URL
 */
 
 // ========================================
